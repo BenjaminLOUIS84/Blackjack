@@ -43,6 +43,19 @@ let cardsEl = document.getElementById("cards-el")
 // console.log(sumEl)
 // console.log(cardsEl)
 
+// Ajouter le nom et le credit du joueur
+// Créer un objet
+
+let player = {
+
+    name : "Per",
+    credit : 145 
+}
+//let playerName = "Per" Mettre ces 2 valeur dans l'objet ci dessus
+//let playerCredit = 145
+
+let playerEl = document.getElementById("player-el")
+
 ///////////////////////////////////////////////////////////////////////
 //ETAPE 0
 //Déclarer les Variables
@@ -114,7 +127,7 @@ function startGame() {
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
-
+    playerEl.textContent = player.name + ": $ " + player.credit
     renderGame()
 }
 
